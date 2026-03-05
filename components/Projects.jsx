@@ -43,8 +43,8 @@ export default function Projects() {
 			title: "Web Portfolio 2025",
 			description:
 				"A modern, responsive portfolio website built with React 19 and Vite, featuring sleek animations and optimized performance. This portfolio showcases my work and skills with a clean, professional design.",
-			link: "https://jfgarcia0911.github.io/jfportfolio-2/",
-			code: "https://github.com/jfgarcia0911/jfportfolio-2",
+			link: "https://jf-portfolio-nextjs-git-master-xaero09s-projects.vercel.app/",
+			code: "https://github.com/jfgarcia0911/jf-portfolio-nextjs",
 		},
 		{
 			image: "/jobseeker.png",
