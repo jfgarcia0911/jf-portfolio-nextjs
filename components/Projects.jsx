@@ -5,6 +5,14 @@ import ProjectCard from "./ProjectCard.jsx";
 
 export default function Projects() {
 	const listProjects = [
+    {
+			image: "/apple.png",
+			title: "Apple-iPhone Clone App",
+			description:
+				"Frontend-only recreation of Apple’s iPhone product page using Next.js, Tailwind CSS, and Framer Motion. This project focuses on Apple-level UI polish, responsive layouts, and scroll-based animations.",
+			link: "https://apple-iphone-clone-zeta.vercel.app/",
+			code: "https://github.com/jfgarcia0911/apple-iphone-clone",
+		},
 		{
 			image: "/amazon.png",
 			title: "Amazon Clone App",
