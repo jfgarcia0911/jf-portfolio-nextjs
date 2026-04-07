@@ -1,11 +1,17 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function About() {
 	return (
-		<section
+		<motion.section
+			 initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.5 }}
 			id="about"
-			className="min-h-screen overflow- flex items-center justify-center text-white px-4 sm:px-6 -z-10 "
+			className="min-h-screen overflow- flex items-center justify-center text-white px-4 sm:px-6 -z-10  h-screen "
 		>
 			<div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
 				<figure
@@ -68,6 +74,6 @@ export default function About() {
 					</footer>
 				</article>
 			</div>
-		</section>
+		</motion.section>
 	);
 }
