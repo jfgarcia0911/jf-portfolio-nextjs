@@ -6,13 +6,23 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import MobileMenu from "@/components/Navbar/MobileMenu";
 
+const navLinks = [
+	{ name: "Home", href: "#home" },
+	{ name: "About", href: "#about" },
+	{ name: "Skills", href: "#skills" },
+	{ name: "My projects", href: "#projects" },
+];
+
 export default function Navbar({ isDarkMode, setIsDarkMode }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const brandLogo = isDarkMode === "dark" ? "/JF-white-V2.png" : "/JF-logo.png";
+
+  const textColor = isDarkMode === "dark" ? "text-white" : "text-gray-900";
+
 	return (
 		<header
-			className={`fixed  flex justify-center  top-0   w-full   z-50    ${isDarkMode === "dark" ? " text-white" : " text-gray-900"}`}
+			className={`fixed  flex justify-center  top-0   w-full   z-50    ${textColor}`}
 		>
 			<nav className=" flex justify-between w-380 mx-5 md:mx-15  items-center h-14 md:h-24">
 				<Link href="#home" className="relative w-10 md:w-15 ">
@@ -21,47 +31,25 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 						alt="Brand Logo"
 						width={100}
 						height={50}
+            priority
 						className="object-contain"
 					/>
 				</Link>
 				<div className=" gap-4 md:gap-8 hidden sm:flex">
 					<ul className="flex  gap-4 md:gap-8 font-bold md:text-lg">
-						<li>
-							{" "}
-							<Link
-								href="#home"
-								className="hover:text-blue-500 focus:underline"
-							>
-								Home
-							</Link>
-						</li>
-						<li>
-							{" "}
-							<Link
-								href="#about"
-								className="hover:text-blue-500 focus:underline"
-							>
-								About
-							</Link>
-						</li>
-						<li>
-							{" "}
-							<Link
-								href="#skills"
-								className="hover:text-blue-500 focus:underline"
-							>
-								Skills
-							</Link>
-						</li>
-						<li>
-							{" "}
-							<Link
-								href="#projects"
-								className="hover:text-blue-500 focus:underline"
-							>
-								My projects
-							</Link>
-						</li>
+						{navLinks.map((link, index) => {
+							return (
+								<li key={index}>
+									<Link
+										href={link.href}
+										className="hover:text-blue-500 focus:underline"
+									>
+										{link.name}
+									</Link>
+								</li>
+							);
+						})}
+						
 					</ul>
 					<div
 						onClick={() =>
@@ -71,9 +59,9 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 					></div>
 				</div>
 				<div className="block sm:hidden cursor-pointer">
-					{!isOpen &&
+					{!isOpen && (
 						<Menu onClick={() => setIsOpen(!isOpen)} className="h-7 w-7 " />
-					}
+					)}
 				</div>
 
 				<AnimatePresence>
