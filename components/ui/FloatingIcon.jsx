@@ -1,9 +1,8 @@
-import React from "react";
-import GithubIcon from "@/icon/GithubIcon";
 import TriangleIcon from "@/icon/TriangleIcon"
 import SemiCircleIcon from "@/icon/SemiCircleIcon"
 import LineIcon from "@/icon/LineIcon"
 import TwirlIcon from "@/icon/TwirlIcon"
+
 export default function FloatingIcon({positionX, positionY}) {
 	return (
     <>
