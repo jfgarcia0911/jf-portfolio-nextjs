@@ -4,6 +4,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /* globals.css */
 .animated-gradient {
   animation: gradientShift 5s ease infinite;
@@ -27,4 +28,18 @@ html {
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
+}
+
+span:hover {
+  display: inline-block; /* needed for transform */
+  animation: stretchX 0.6s ease-in-out;
+  color: #de9a1d; /* Change to your desired color on hover */
+ 
+}
+
+@keyframes stretchX {
+  0%   { transform: scaleY(0.7); }
+  50%  { transform: scaleY(1.2); }
+  70%  { transform: scaleY(0.6); }
+  100% { transform: scaleY(1.1); }
 }
