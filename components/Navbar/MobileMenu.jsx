@@ -2,27 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import Link from "next/link";
-import FacebookIcon from "@/icon/FacebookIcon";
-import LinkedInIcon from "@/icon/LinkedInIcon";
-import GithubIcon from "@/icon/GithubIcon";
-import TwitterIcon from "@/icon/TwitterIcon";
-import { a } from "framer-motion/client";
+import { navIcons } from "@/constants/navIcons";
+import { navLinks } from "@/constants/navLinks";
 
-const navLinks = [
-	{ name: "Home", href: "#home", ariaLabel: "Home" },
-	{ name: "About", href: "#about", ariaLabel: "About" },
-	{ name: "Skills", href: "#skills", ariaLabel: "Skills" },
-	{ name: "My projects", href: "#projects", ariaLabel: "My projects" },
-];
-
-const navIcons = [
-	{ icon: GithubIcon, href: "https://www.github.com" },
-	{ icon: FacebookIcon, href: "https://www.facebook.com" },
-	{ icon: LinkedInIcon, href: "https://www.linkedin.com" },
-	{ icon: TwitterIcon, href: "https://www.twitter.com" },
-];
-
-export default function MobileMenu({ isOpen, setIsOpen }) {
+export default function MobileMenu({  setIsOpen }) {
 	return (
 		<motion.div
 			initial={{ opacity: 0, scaleX: 0 }}
@@ -42,6 +25,7 @@ export default function MobileMenu({ isOpen, setIsOpen }) {
 						<Link
 							key={index}
 							href={link.href}
+              aria-label={link.ariaLabel}
 							className="block py-3 text-white hover:text-blue-500 focus:underline"
 							onClick={() => setIsOpen(false)}
 						>
