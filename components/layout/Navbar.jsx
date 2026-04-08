@@ -2,19 +2,15 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { Menu } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
 import MobileMenu from "@/components/Navbar/MobileMenu";
-
-const navLinks = [
-	{ name: "Home", href: "#home" },
-	{ name: "About", href: "#about" },
-	{ name: "Skills", href: "#skills" },
-	{ name: "My projects", href: "#projects" },
-];
+import { navLinks } from "@/constants/navLinks";
+import { useScrollDirection } from "@/hooks/useScrollDirection";
 
 export default function Navbar({ isDarkMode, setIsDarkMode }) {
 	const [isOpen, setIsOpen] = useState(false);
+const isVisible = useScrollDirection();
 
 	const brandLogo = isDarkMode === "dark" ? "/JF-white-V2.png" : "/JF-logo.png";
 
@@ -22,7 +18,9 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 
 	return (
 		<header
-			className={`fixed  flex justify-center  top-0   w-full   z-50    ${textColor}`}
+			className={`fixed  flex justify-center  top-0   w-full   z-50    ${textColor}  ${
+				isVisible === "up" ? "translate-y-0" : "-translate-y-full"
+			} transition-transform duration-300 ease-in-out`}
 		>
 			<nav className=" flex justify-between w-380 mx-5 md:mx-15  items-center h-14 md:h-24">
 				<Link href="#home" className="relative w-10 md:w-15 ">
@@ -42,7 +40,8 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 								<li key={index}>
 									<Link
 										href={link.href}
-										className="hover:text-blue-500 focus:underline"
+                    aria-label={link.ariaLabel}
+										className="hover:text-blue-500"
 									>
 										{link.name}
 									</Link>
@@ -65,7 +64,7 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 				</div>
 
 				<AnimatePresence>
-					{isOpen && <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
+					{isOpen && <MobileMenu  setIsOpen={setIsOpen} />}
 				</AnimatePresence>
 			</nav>
 		</header>
