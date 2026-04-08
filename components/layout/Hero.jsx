@@ -5,7 +5,6 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import FloatingIcon from "@/components/ui/FloatingIcon";
-import TriangleIcon from "@/icon/TriangleIcon";
 
 export default function Hero({ isDarkMode }) {
 	const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -16,7 +15,7 @@ export default function Hero({ isDarkMode }) {
 		const y = (clientY / window.innerHeight - 0.5) * 100;
 		setPosition({ x, y });
 	};
-	const textColor = isDarkMode === "dark" ? "text-white" : "text-gray-900";
+	const textColor = isDarkMode === "dark" ? "text-white" : "text-black";
 
 	const heroImage =
 		isDarkMode === "dark"
@@ -27,9 +26,9 @@ export default function Hero({ isDarkMode }) {
 		<section
 			onMouseMove={handleMouseMove}
 			id="home"
-			className={`min-h-screen relative flex items-center justify-center  ${textColor}`}
+			className={`min-h-screen relative flex items-center justify-center overflow-hidden  ${textColor}`}
 		>
-			<div className=" w-350 mx-5 md:mx-20  flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+			<div className=" w-350 mx-5 md:mx-20  flex flex-col-reverse lg:flex-row items-center justify-between gap-10 z-10">
 				<motion.div
 					initial={{ x: -100, opacity: 0 }}
 					whileInView={{ x: 0, opacity: 1 }}
@@ -37,7 +36,7 @@ export default function Hero({ isDarkMode }) {
 					viewport={{ once: false, amount: 0.6 }}
 					className="flex flex-col gap-8 lg:w-[50%] lg:min-w-50 items-center lg:items-start"
 				>
-					<h2 className="text-4xl xl:text-5xl font-bold cursor-default flex flex-wrap ">
+					<h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold cursor-default flex flex-wrap transition-all duration-300">
 						<div className="mr-3">
 							<span>F</span>
 							<span>r</span>
@@ -86,14 +85,14 @@ export default function Hero({ isDarkMode }) {
 						alt="Computer Graphic"
 						fill
 						priority
+            sizes="(max-width: 768px) 100vw,
+           (max-width: 1200px) 70vw,
+           50vw"
 						className="object-contain scale-x-[-1] "
 					/>
 				</motion.div>
 			</div>
-			<div className="-z-10">
 			<FloatingIcon positionX={position.x} positionY={position.y} />
-
-      </div>
 		</section>
 	);
 }
