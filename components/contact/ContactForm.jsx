@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
-export default function ContactForm({ className }) {
+export default function ContactForm({ className, isDarkMode }) {
 	const form = useRef();
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -39,7 +39,7 @@ export default function ContactForm({ className }) {
 					id="name"
 					type="text"
 					name="name"
-					className="border w-full"
+					className={`border w-full rounded-md  bg-white text-gray-900 p-2`}
 					required
 				/>
 			</div>
@@ -51,7 +51,7 @@ export default function ContactForm({ className }) {
 					id="email"
 					type="email"
 					name="email"
-					className="border w-full"
+					className="border w-full rounded-md bg-white text-gray-900 p-2"
 					required
 				/>
 			</div>
@@ -62,13 +62,13 @@ export default function ContactForm({ className }) {
 				<textarea
 					id="message"
 					name="message"
-					className="border w-full"
+					className="border w-full rounded-md bg-white text-gray-900 p-2"
 					required
 				/>
 			</div>
 			<div className="flex justify-end ">
 				<button
-					className="border px-4 py-1 bg-amber-700 cursor-pointer"
+					className="border px-4 py-1 bg-amber-700 cursor-pointer rounded-md text-white"
 					type="submit"
 					disabled={isSubmitting}
 				>
