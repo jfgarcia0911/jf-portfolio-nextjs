@@ -4,17 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
-import MobileMenu from "@/components/navbar/MobileMenu";
 import { navLinks } from "@/constants/navLinks";
-import { useScrollDirection } from "@/hooks/useScrollDirection";
+import MobileMenu from "@/components/navbar/MobileMenu";
 
 export default function Navbar({ isDarkMode, setIsDarkMode }) {
 	const [isOpen, setIsOpen] = useState(false);
-const isVisible = useScrollDirection();
 
 	const brandLogo = isDarkMode === "dark" ? "/JF-white-V2.png" : "/JF-logo.png";
 
-  const textColor = isDarkMode === "dark" ? "text-white" : "text-gray-900";
+	const textColor = isDarkMode === "dark" ? "text-white" : "text-gray-900";
 
 	return (
 		<header
@@ -29,7 +27,7 @@ const isVisible = useScrollDirection();
 						alt="Brand Logo"
 						width={100}
 						height={50}
-            priority
+						priority
 						className="object-contain"
 					/>
 				</Link>
@@ -40,7 +38,7 @@ const isVisible = useScrollDirection();
 								<li key={index}>
 									<Link
 										href={link.href}
-                    aria-label={link.ariaLabel}
+										aria-label={link.ariaLabel}
 										className="hover:text-blue-500"
 									>
 										{link.name}
@@ -48,7 +46,6 @@ const isVisible = useScrollDirection();
 								</li>
 							);
 						})}
-						
 					</ul>
 					<div
 						onClick={() =>
@@ -64,7 +61,7 @@ const isVisible = useScrollDirection();
 				</div>
 
 				<AnimatePresence>
-					{isOpen && <MobileMenu  setIsOpen={setIsOpen} />}
+					{isOpen && <MobileMenu setIsOpen={setIsOpen} />}
 				</AnimatePresence>
 			</nav>
 		</header>
