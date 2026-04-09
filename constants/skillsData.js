@@ -10,7 +10,7 @@ import NodeJsIcon from "@/icon/NodeJsIcon";
 import SassIcon from "@/icon/SassIcon";
 import GitIcon from "@/icon/GitIcon";
 import FigmaIcon from "@/icon/FigmaIcon";
-
+import FirebaseIcon from "@/icon/FirebaseIcon";
 
 export const skillsData = [
 	{
@@ -70,6 +70,11 @@ export const skillsData = [
 	},
 	{
 		id: 12,
+		icon: FirebaseIcon,
+		title: "Firebase",
+	},
+  {
+		id: 13,
 		icon: FigmaIcon,
 		title: "Figma",
 	},
