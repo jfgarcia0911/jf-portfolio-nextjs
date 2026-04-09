@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
-import MobileMenu from "@/components/Navbar/MobileMenu";
+import MobileMenu from "@/components/navbar/MobileMenu";
 import { navLinks } from "@/constants/navLinks";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
 
@@ -18,9 +18,9 @@ const isVisible = useScrollDirection();
 
 	return (
 		<header
-			className={`fixed  flex justify-center  top-0   w-full   z-50    ${textColor}  ${
-				isVisible === "up" ? "translate-y-0" : "-translate-y-full"
-			} transition-transform duration-300 ease-in-out`}
+			className={`fixed  flex justify-center  top-0   w-full   z-50    ${textColor}  
+     
+       transition-transform duration-300 ease-in-out`}
 		>
 			<nav className=" flex justify-between w-380 mx-5 md:mx-15  items-center h-14 md:h-24">
 				<Link href="#home" className="relative w-10 md:w-15 ">
