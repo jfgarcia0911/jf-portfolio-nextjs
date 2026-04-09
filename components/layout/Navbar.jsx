@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import { navLinks } from "@/constants/navLinks";
-import MobileMenu from "@/components/navbar/MobileMenu";
 
+import MobileMenu from "@/components/navbar/MobileMenu";
 export default function Navbar({ isDarkMode, setIsDarkMode }) {
 	const [isOpen, setIsOpen] = useState(false);
 
