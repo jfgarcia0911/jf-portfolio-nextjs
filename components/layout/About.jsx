@@ -8,7 +8,7 @@ export default function About({ isDarkMode }) {
 			id="about"
 			className={`relative min-h-screen flex items-center justify-center ${textColor}`}
 		>
-			<div className=" w-7xl mx-5 md:mx-20  flex flex-col lg:flex-row items-center justify-between space-y-10 z-10">
+			<div className=" w-7xl mx-5 md:mx-20  flex flex-col lg:flex-row items-center justify-between space-y-10 py-30 z-10">
 				<motion.div
 					initial={{ y: -100, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
