@@ -15,6 +15,7 @@ export default function ProjectCard({ project, index }) {
 			<div className="absolute inset-0 bg-black opacity-30 transition-opacity"></div>
 
 			{/* Hover overlay */}
+      <div className="absolute inset-0 bg-linear-to-r from-gray-900 to-gray-800 opacity-50 duration-200 rounded-md scale-x-0 origin-left group-hover:scale-x-100 z-10 flex flex-col items-center justify-center gap-5 lg:gap-10"></div>
 			<div className="absolute inset-0 bg-linear-to-r from-gray-900 to-gray-500 opacity-90 duration-500 rounded-md scale-x-0 origin-left group-hover:scale-x-100 z-30 flex flex-col items-center justify-center gap-5 lg:gap-10">
 				<h2 className="text-white font-bold text-xl md:text-3xl lg:text-5xl">
 					{project.title}
@@ -25,7 +26,7 @@ export default function ProjectCard({ project, index }) {
 				<div className="flex items-center justify-center gap-10">
 					{isSameLink ? (
 						<Link href={project.link} target="_blank" rel="noopener noreferrer">
-							<button className="bg-white font-medium text-black py-2 px-4 rounded-lg shadow cursor-pointer">
+							<button className="bg-white font-medium text-black py-1 md:py-2 px-2 md:px-4 rounded-lg shadow cursor-pointer">
 								View Code
 							</button>
 						</Link>
@@ -36,7 +37,7 @@ export default function ProjectCard({ project, index }) {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<button className="bg-white font-medium text-black py-2 px-4 rounded-lg shadow cursor-pointer">
+								<button className="bg-white font-medium text-black py-1 md:py-2 px-2 md:px-4 rounded-lg shadow cursor-pointer">
 									Live Preview
 								</button>
 							</Link>
@@ -45,7 +46,7 @@ export default function ProjectCard({ project, index }) {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<button className="bg-white font-medium text-black py-2 px-4 rounded-lg shadow cursor-pointer">
+								<button className="bg-white font-medium text-black py-1 md:py-2 px-2 md:px-4 rounded-lg shadow cursor-pointer">
 									View Code
 								</button>
 							</Link>
@@ -53,6 +54,10 @@ export default function ProjectCard({ project, index }) {
 					)}
 				</div>
 			</div>
+      
+      <div className={`absolute -top-10 ${isOddIndex ? "left-5" : "right-5"} transition-transform duration-300 translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 z-40 hidden md:block`}>
+        <h2 className="text-[7rem] font-bold font-serif text-white">{index + 1}</h2>
+      </div>
 
 			{/* Default card content (hidden on hover) */}
 			<div
