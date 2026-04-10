@@ -9,7 +9,7 @@ export default function ProjectCard({ project, index }) {
 		<li
 			key={index}
 			style={{ backgroundImage: `url(${project.image})` }}
-			className={`relative w-[80%] min-w-110 aspect-video bg-cover bg-center rounded-md group ${spacingClass}`}
+			className={`relative w-[80%]  aspect-video bg-cover bg-center rounded-md group ${spacingClass}`}
 		>
 			{/* Dark overlay */}
 			<div className="absolute inset-0 bg-black opacity-30 transition-opacity"></div>
