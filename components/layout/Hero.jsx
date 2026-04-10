@@ -83,7 +83,7 @@ export default function Hero({ isDarkMode }) {
 					whileInView={{ x: 0, opacity: 1 }}
 					transition={{ duration: 0.8, ease: "easeOut" }}
 					viewport={{ once: false, amount: 0.5 }}
-					className="relative w-[70%]  h-80 lg:h-130 "
+					className="relative w-[90%] md:w-[70%]  h-80 lg:h-130 "
 				>
 					<Image
 						src={heroImage}
