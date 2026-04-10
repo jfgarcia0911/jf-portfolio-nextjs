@@ -24,7 +24,7 @@ export default function Skills({ isDarkMode }) {
 		>
 			<div
 				ref={ref}
-				className="w-7xl mx-5 md:mx-20  flex flex-col  items-center justify-center text-center gap-4 z-10"
+				className="w-7xl mx-5 md:mx-20  flex flex-col  items-center justify-center text-center gap-4 py-30 z-10"
 			>
 				<motion.div
 					initial={{ y: -100, opacity: 0 }}
