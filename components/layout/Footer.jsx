@@ -20,7 +20,7 @@ export default function Footer({ isDarkMode }) {
 					className="object-contain"
 				/>
 			</Link>
-			<ul className="flex gap-10">
+			<ul className="flex gap-5 md:gap-10">
 				{navIcons.map((navIcon, index) => (
 					<li key={index}>
 						<Link
@@ -34,7 +34,7 @@ export default function Footer({ isDarkMode }) {
 					</li>
 				))}
 			</ul>
-			<p className="font-bold">&copy; 2026 John Francis Garcia. All rights reserved. </p>
+			<p className="font-bold mx-2 text-center">&copy; 2026 John Francis Garcia. All rights reserved. </p>
 		</footer>
 	);
 }

@@ -12,7 +12,7 @@ export default function Home() {
 	const [isDarkMode, setIsDarkMode] = useState("dark");
 	return (
 		<main
-			className={`${isDarkMode === "dark" ? "bg-gray-900" : "bg-white"}   scroll-smooth`}
+			className={`${isDarkMode === "dark" ? "bg-gray-900" : "bg-white"} overflow-hidden  scroll-smooth`}
 		>
 			<Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 			<Hero isDarkMode={isDarkMode} />
