@@ -37,7 +37,7 @@ export default function Contact({ isDarkMode }) {
 							I&apos;d like to hear from you!
 						</h3>
 						<p
-							className={` ${isDarkMode === "dark" ? "text-gray-400" : "text-white/80"} text-xs leading-relaxed italic  w-full text-center`}
+							className={` ${isDarkMode === "dark" ? "text-gray-700" : "text-white/80"} text-xs leading-relaxed italic  w-full text-center`}
 						>
 							If you have any inquiries or just want to say hi, please use the
 							contact form
