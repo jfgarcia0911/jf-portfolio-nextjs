@@ -33,9 +33,9 @@ export default function Skills({ isDarkMode }) {
 					viewport={{ once: false, amount: 0.6 }}
 					className="flex flex-col gap-4"
 				>
-					<h3 className={`${isDarkMode === "dark" && "text-gray-400"}`}>
+					<p className={`${isDarkMode === "dark" && "text-gray-400"}`}>
 						A PROBLEM IS AN OPPORTUNITY TO DO YOUR BEST.
-					</h3>
+					</p>
 					<h2 className="text-4xl lg:text-6xl  transition-all duration-300 font-bold ">
 						Skills & Experience
 					</h2>
