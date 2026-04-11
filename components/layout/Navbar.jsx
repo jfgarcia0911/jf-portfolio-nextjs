@@ -13,7 +13,7 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 	const brandLogo = isDarkMode === "dark" ? "/JF-white-V2.png" : "/JF-logo.png";
 
 	const textColor = isDarkMode === "dark" ? "text-white" : "text-gray-900";
- const bgColor = isDarkMode === "dark" ? "bg-gray-900" : "bg-white";
+	const bgColor = isDarkMode === "dark" ? "bg-gray-900" : "bg-white";
 	return (
 		<header
 			className={`fixed  flex justify-center  top-0   w-full   z-50 ${bgColor}    ${textColor}  
@@ -51,12 +51,14 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 						})}
 					</ul>
 					{/* Dark mode toggle button */}
-					<div
+					<button
 						onClick={() =>
 							setIsDarkMode(isDarkMode === "dark" ? "light" : "dark")
 						}
+						aria-label="Toggle dark mode"
+						aria-pressed={isDarkMode === "dark"}
 						className={` rounded-full  h-7 w-7 cursor-pointer bg-linear-to-r  ${isDarkMode === "dark" ? "from-black to-white " : "from-white to-black"}`}
-					></div>
+					></button>
 				</div>
 				{/* Mobile menu icon (hamburger) visible only on small screens */}
 				<div className="block sm:hidden cursor-pointer">
@@ -66,7 +68,13 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 				</div>
 				{/* AnimatePresence handles smooth mounting/unmounting of MobileMenu */}
 				<AnimatePresence>
-					{isOpen && <MobileMenu setIsOpen={setIsOpen} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />}
+					{isOpen && (
+						<MobileMenu
+							setIsOpen={setIsOpen}
+							isDarkMode={isDarkMode}
+							setIsDarkMode={setIsDarkMode}
+						/>
+					)}
 				</AnimatePresence>
 			</nav>
 		</header>
