@@ -5,8 +5,13 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { AnimatePresence } from "framer-motion";
 import { navLinks } from "@/constants/navLinks";
+import dynamic from "next/dynamic";
 
-import MobileMenu from "@/components/navbar/MobileMenu";
+const MobileMenu = dynamic(
+  () => import('@/components/navbar/MobileMenu'),
+  { ssr: false }  // Disable server-side rendering (menu is client-only)
+);
+
 export default function Navbar({ isDarkMode, setIsDarkMode }) {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -23,7 +28,7 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 			{/* Main navigation bar */}
 			<nav className=" flex justify-between w-380 mx-5 md:mx-15  items-center h-14 md:h-24">
 				{/* Brand logo linking to home section */}
-				<Link href="#home" className="relative w-10 md:w-15 ">
+				<Link href="#home" aria-label="Home" className="relative w-10 md:w-15 ">
 					<Image
 						src={brandLogo}
 						alt="Brand Logo"
