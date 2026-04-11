@@ -1,6 +1,6 @@
 export const projectLists = [
 	{
-		image: "/amazon.png",
+		image: "/amazon.webp",
 		title: "Amazon Clone App",
     description: "Full‑stack e‑commerce clone of Amazon",
 		subDescription:
@@ -9,7 +9,7 @@ export const projectLists = [
 		code: "https://github.com/jfgarcia0911/amazon-clone",
 	},
 	{
-		image: "/apple.png",
+		image: "/apple.webp",
 		title: "Apple Clone App",
 		description: "Page recreation — polished & animated",
 		subDescription:
@@ -19,7 +19,7 @@ export const projectLists = [
 	},
 
 	{
-		image: "/fbclone.png",
+		image: "/fbclone.webp",
 		title: "FB Clone", description: "Facebook‑inspired social media app",
 		subDescription:
 			"A full-stack social media application inspired by Facebook, built with modern web technologies to replicate core social networking features including story sharing, image posts, and real-time interactions.",
