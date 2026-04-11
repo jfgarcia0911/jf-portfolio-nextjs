@@ -35,7 +35,7 @@ export default function ProjectCard({ project, index }) {
 				</p>
 				<div className="flex items-center justify-center gap-10">
 					{isSameLink ? (
-						<Link href={project.link} target="_blank" rel="noopener noreferrer">
+						<Link href={project.link} aria-label={`View code for ${project.title}`} target="_blank" rel="noopener noreferrer">
 							<button className="bg-white font-medium text-black py-1 md:py-2 px-2 md:px-4 rounded-lg shadow cursor-pointer">
 								View Code
 							</button>
@@ -56,6 +56,7 @@ export default function ProjectCard({ project, index }) {
 								href={project.code}
 								target="_blank"
 								rel="noopener noreferrer"
+                aria-label={`View code for ${project.title}`}
 							>
 								<button className="bg-white font-medium text-black py-1 md:py-2 px-2 md:px-4 rounded-lg shadow cursor-pointer">
 									View Code
