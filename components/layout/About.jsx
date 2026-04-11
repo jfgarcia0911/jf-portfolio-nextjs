@@ -78,7 +78,7 @@ export default function About({ isDarkMode }) {
 					</p>
 				</motion.div>
 			</div>
-			<h1 className="absolute text-[30vw] font-serif font-bold bg-[url('/img_about.png')] bg-cover bg-center text-transparent bg-clip-text opacity-30 ">
+			<h1 className="absolute text-[30vw] font-serif font-bold bg-[url('/img_about.webp')] bg-cover bg-center text-transparent bg-clip-text opacity-30 ">
 				JFG 
 			</h1>
 		</section>
