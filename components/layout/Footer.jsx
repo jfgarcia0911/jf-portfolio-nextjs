@@ -10,7 +10,7 @@ export default function Footer({ isDarkMode }) {
 		<footer
 			className={`${textColor}  flex flex-col items-center justify-center bg-linear-to-t from-gray-300 to-gray-900 gap-10 w-full py-20`}
 		>
-			<Link href="#home" className="relative w-20 md:w-25 ">
+			<Link href="#home" aria-label="Home" className="relative w-20 md:w-25 ">
 				<Image
 					src={brandLogo}
 					alt="Brand Logo"
