@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
-
+import Image from "next/image";
 export default function ProjectCard({ project, index }) {
 	const isOddIndex = index % 2 !== 0;
 	const spacingClass = isOddIndex ? "lg:mr-20" : "lg:ml-20";
@@ -8,9 +8,19 @@ export default function ProjectCard({ project, index }) {
 	return (
 		<li
 			key={index}
-			style={{ backgroundImage: `url(${project.image})` }}
-			className={`relative w-[95%]  md:w-[80%]  aspect-video bg-cover bg-center rounded-md group ${spacingClass}`}
+			// style={{ backgroundImage: `url(${project.image})` }}
+			className={`relative w-[95%]  md:w-[80%]  aspect-video bg-cover  rounded-md group ${spacingClass}`}
 		>
+      {/* Optimized background image using Next.js Image */}
+      <Image
+        src={project.image}
+        alt={project.title}
+        fill
+        className="object-cover rounded-md"
+        sizes="(max-width: 768px) 95vw, 80vw"
+        quality={75}
+        priority={index === 0} // only first image is high priority
+      />
 			{/* Dark overlay */}
 			<div className="absolute inset-0 bg-black opacity-30 transition-opacity"></div>
 
@@ -35,6 +45,7 @@ export default function ProjectCard({ project, index }) {
 							<Link
 								href={project.link}
 								target="_blank"
+                aria-label={`Live Preview for ${project.title}`}
 								rel="noopener noreferrer"
 							>
 								<button className="bg-white font-medium text-black py-1 md:py-2 px-2 md:px-4 rounded-lg shadow cursor-pointer">
@@ -54,7 +65,7 @@ export default function ProjectCard({ project, index }) {
 					)}
 				</div>
 			</div>
-      
+      {/* Animated project index number overlay (slides in on hover) */}
       <div className={`absolute -top-10 ${isOddIndex ? "left-5" : "right-5"} transition-transform duration-300 translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 z-40 hidden md:block`}>
         <h2 className="text-[7rem] font-bold font-serif text-white">{index + 1}</h2>
       </div>
