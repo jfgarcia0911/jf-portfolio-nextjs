@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { color, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
@@ -21,8 +21,8 @@ export default function Hero({ isDarkMode }) {
 	// Switch hero image based on dark/light mode
 	const heroImage =
 		isDarkMode === "dark"
-			? "/computer-graphic.png"
-			: "/computer-graphic-invert.png";
+			? "/computer-graphic.webp"
+			: "/computer-graphic-invert.webp";
 
 	return (
 		<section
@@ -71,7 +71,8 @@ export default function Hero({ isDarkMode }) {
 					{/* Link to About section with animated icon */}
 					<Link
 						href="#about"
-						className="group font-semibold text-violet-500  items-center"
+            aria-label="About"
+						className={`group font-semibold   items-center ${isDarkMode === "dark" ? "text-violet-400" : "text-violet-800"} flex`}
 					>
 						About me{" "}
 						<ChevronRight className="h-5 w-5 ml-1 inline group-hover:rotate-90 transition-transform duration-300" />
