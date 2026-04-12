@@ -26,6 +26,14 @@ export const projectLists = [
 		link: "https://github.com/jfgarcia0911/fb-clone",
 		code: "https://github.com/jfgarcia0911/fb-clone",
 	},
+  {
+  image: "/portfolio.webp",            
+  title: "Personal Portfolio Website",
+  description: "Modern developer portfolio with EmailJS contact integration",
+  subDescription: "A responsive Next.js portfolio showcasing my projects and skills. Features dark/light mode, smooth animations with Framer Motion, and a functional contact form powered by EmailJS for direct messaging without a backend server. Built with Tailwind CSS for a polished, accessible UI.",
+  link: "https://jf-portfolio-nextjs.vercel.app/",   
+  code: "https://github.com/jfgarcia0911/jf-portfolio-nextjs", 
+}
 	// {
 	// 	image: "/dev-connect.png",
 	// 	title: "Developer Social Platform",
