@@ -67,7 +67,7 @@ export default function ProjectCard({ project, index }) {
 				</div>
 			</div>
       {/* Animated project index number overlay (slides in on hover) */}
-      <div className={`absolute -top-10 ${isOddIndex ? "left-5" : "right-5"} transition-transform duration-300 translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 z-40 hidden md:block`}>
+      <div className={`absolute -top-10 ${isOddIndex ? "left-5" : "right-5"} transition-transform duration-300  translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 z-40 hidden md:block`}>
         <h2 className="text-[7rem] font-bold font-serif text-white">{index + 1}</h2>
       </div>
 

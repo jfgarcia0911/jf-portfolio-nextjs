@@ -4,7 +4,7 @@ export const projectLists = [
 		title: "Amazon Clone App",
     description: "Full‑stack e‑commerce clone of Amazon",
 		subDescription:
-			"A full-stack e-commerce web application inspired by Amazon. Features include product listings, category-based search, detailed product pages, authentication, cart management, and order tracking. Built with React, Next.js, Firebase, and Tailwind CSS, the app delivers a responsive and user-friendly shopping experience.",
+			"A full-stack e-commerce web application inspired by Amazon. Features include product listings, category-based search, detailed product pages, authentication, and cart management. Built with React, Next.js, Firebase, and Tailwind CSS, the app delivers a responsive and user-friendly shopping experience.",
 		link: "https://amazon-clone-peach-five-34.vercel.app/",
 		code: "https://github.com/jfgarcia0911/amazon-clone",
 	},

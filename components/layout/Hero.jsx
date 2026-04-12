@@ -91,9 +91,8 @@ export default function Hero({ isDarkMode }) {
 						alt="Computer Graphic"
 						fill
 						priority
-						sizes="(max-width: 768px) 100vw,
-           (max-width: 1200px) 70vw,
-           50vw"
+						sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 33vw"
+            quality={60}
 						className="object-contain scale-x-[-1] "
 					/>
 				</motion.div>
