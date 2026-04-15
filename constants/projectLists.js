@@ -30,7 +30,7 @@ export const projectLists = [
   image: "/portfolio.webp",            
   title: "Personal Portfolio Website",
   description: "Modern developer portfolio with EmailJS contact integration",
-  subDescription: "A responsive Next.js portfolio showcasing my projects and skills. Features dark/light mode, smooth animations with Framer Motion, and a functional contact form powered by EmailJS for direct messaging without a backend server. Built with Tailwind CSS for a polished, accessible UI.",
+  subDescription: "A responsive Next.js portfolio showcasing my projects and skills. Features dark/light mode, smooth animations with Framer Motion, and a functional contact form powered by EmailJS for direct messaging without a backend server. Built with Tailwind CSS for a polished, accessible UI. Achieves 100/100 scores on Lighthouse performance, accessibility, best practices, and SEO.",
   link: "https://jf-portfolio-nextjs.vercel.app/",   
   code: "https://github.com/jfgarcia0911/jf-portfolio-nextjs", 
 }

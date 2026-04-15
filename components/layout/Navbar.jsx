@@ -107,7 +107,7 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 					/>
 				</Link>
 				{/* Desktop navigation links + dark mode toggle (hidden on small screens) */}
-				<div className=" gap-4 md:gap-8 hidden sm:flex">
+				<div className="relative gap-4 md:gap-8 hidden sm:flex">
 					<ul className="flex relative  gap-4 md:gap-8 font-bold md:text-lg">
 						{navLinks.map((link, index) => {
 							return (
@@ -129,13 +129,7 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 								</li>
 							);
 						})}
-						<div
-							className="absolute top-1/2 -translate-y-1/2 h-8  rounded bg-linear-to-t from-cyan-500 to-gray-500  transition-all duration-300 ease-in-out"
-							style={{
-								left: highlightStyle.left,
-								width: highlightStyle.width,
-							}}
-						/>
+						
 					</ul>
 					{/* Dark mode toggle button */}
 					<button
@@ -146,6 +140,13 @@ export default function Navbar({ isDarkMode, setIsDarkMode }) {
 						aria-pressed={isDarkMode === "dark"}
 						className={` rounded-full  h-7 w-7 cursor-pointer bg-linear-to-r  ${isDarkMode === "dark" ? "from-black to-white " : "from-white to-black"}`}
 					></button>
+          <div
+							className="absolute top-1/2 -translate-y-1/2 h-8  rounded bg-linear-to-t from-cyan-500 to-gray-500  transition-all duration-300 ease-in-out"
+							style={{
+								left: highlightStyle.left,
+								width: highlightStyle.width,
+							}}
+						/>
 				</div>
 				{/* Mobile menu icon (hamburger) visible only on small screens */}
 				<div className="block sm:hidden cursor-pointer">
