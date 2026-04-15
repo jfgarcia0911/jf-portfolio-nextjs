@@ -20,7 +20,7 @@ export default function Skills({ isDarkMode }) {
 		<section
 			id="skills"
 			onMouseMove={handleMouseMove}
-			className={`relative min-h-screen flex items-center justify-center ${textColor} overflow-hidden`}
+			className={`relative scroll-mt-24 min-h-screen flex items-center justify-center ${textColor} overflow-hidden`}
 		>
 			<div
 				ref={ref}

@@ -6,7 +6,7 @@ export default function About({ isDarkMode }) {
 	return (
 		<section
 			id="about"
-			className={`relative min-h-screen flex items-center justify-center ${textColor}`}
+			className={`relative scroll-mt-24 min-h-screen flex items-center justify-center ${textColor}`}
 		>
 			<div className=" w-7xl mx-5 md:mx-20  flex flex-col lg:flex-row items-center justify-between space-y-10 py-30 z-10">
 				<motion.div

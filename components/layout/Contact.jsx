@@ -17,7 +17,7 @@ export default function Contact({ isDarkMode }) {
 		<section
 			onMouseMove={handleMouseMove}
 			id="contact"
-			className={`relative min-h-screen flex items-center justify-center  ${textColor}`}
+			className={`relative scroll-mt-24 min-h-screen flex items-center justify-center  ${textColor}`}
 		>
 			<div
 				className={`max-w-280  ${isDarkMode === "dark" ? "bg-orange-100" : "bg-gray-600"} w-full h-150 mx-5 md:mx-20 flex items-center justify-center rounded-md py-30`}

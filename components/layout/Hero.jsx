@@ -28,7 +28,7 @@ export default function Hero({ isDarkMode }) {
 		<section
 			onMouseMove={handleMouseMove}
 			id="home"
-			className={`min-h-screen relative flex items-center justify-center overflow-hidden  ${textColor}`}
+			className={`min-h-screen scroll-mt-24 relative flex items-center justify-center overflow-hidden  ${textColor}`}
 		>
 			<div className=" w-350 mx-5 md:mx-20  flex flex-col-reverse lg:flex-row items-center justify-between gap-10 py-30 z-10">
 				<motion.div
