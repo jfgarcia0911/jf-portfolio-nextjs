@@ -6,7 +6,7 @@ export const projectLists = [
 			"Full‑stack lead‑generation site for a holiday lighting business",
 		subDescription:
 			"A full-stack web application for a Christmas and permanent lighting installation company. Visitors get an instant price estimate as they choose a package and enter their roofline length, then submit a quote request through a REST API that validates the input and recalculates the estimate server-side. A built-in admin dashboard lists every captured lead with live stats (pipeline value, average estimate), search, and package filters. Built with React, React Router, Vite, and Tailwind CSS on the frontend, and Node.js + Express on the backend.",
-		link: "https://festive-lighting-e72pfyn4l-xaero09s-projects.vercel.app/",
+		link: "https://festive-lighting.vercel.app/",
 		code: "https://github.com/jfgarcia0911/festive-lighting",
 	},
 	{
