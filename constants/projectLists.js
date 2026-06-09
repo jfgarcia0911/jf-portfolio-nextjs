@@ -1,8 +1,18 @@
 export const projectLists = [
 	{
+		image: "/festive-lighting.webp",
+		title: "Festive Lighting Pros",
+		description:
+			"Full‑stack lead‑generation site for a holiday lighting business",
+		subDescription:
+			"A full-stack web application for a Christmas and permanent lighting installation company. Visitors get an instant price estimate as they choose a package and enter their roofline length, then submit a quote request through a REST API that validates the input and recalculates the estimate server-side. A built-in admin dashboard lists every captured lead with live stats (pipeline value, average estimate), search, and package filters. Built with React, React Router, Vite, and Tailwind CSS on the frontend, and Node.js + Express on the backend.",
+		link: "https://festive-lighting-e72pfyn4l-xaero09s-projects.vercel.app/",
+		code: "https://github.com/jfgarcia0911/festive-lighting",
+	},
+	{
 		image: "/amazon.webp",
 		title: "Amazon Clone App",
-    description: "Full‑stack e‑commerce clone of Amazon",
+		description: "Full‑stack e‑commerce clone of Amazon",
 		subDescription:
 			"A full-stack e-commerce web application inspired by Amazon. Features include product listings, category-based search, detailed product pages, authentication, and cart management. Built with React, Next.js, Firebase, and Tailwind CSS, the app delivers a responsive and user-friendly shopping experience.",
 		link: "https://amazon-clone-peach-five-34.vercel.app/",
@@ -20,20 +30,22 @@ export const projectLists = [
 
 	{
 		image: "/fbclone.webp",
-		title: "FB Clone", description: "Facebook‑inspired social media app",
+		title: "FB Clone",
+		description: "Facebook‑inspired social media app",
 		subDescription:
 			"A full-stack social media application inspired by Facebook, built with modern web technologies to replicate core social networking features including story sharing, image posts, and real-time interactions.",
 		link: "https://github.com/jfgarcia0911/fb-clone",
 		code: "https://github.com/jfgarcia0911/fb-clone",
 	},
-  {
-  image: "/portfolio.webp",            
-  title: "Personal Portfolio Website",
-  description: "Modern developer portfolio with EmailJS contact integration",
-  subDescription: "A responsive Next.js portfolio showcasing my projects and skills. Features dark/light mode, smooth animations with Framer Motion, and a functional contact form powered by EmailJS for direct messaging without a backend server. Built with Tailwind CSS for a polished, accessible UI. Achieves 100/100 scores on Lighthouse performance, accessibility, best practices, and SEO.",
-  link: "https://jf-portfolio-nextjs.vercel.app/",   
-  code: "https://github.com/jfgarcia0911/jf-portfolio-nextjs", 
-}
+	{
+		image: "/portfolio.webp",
+		title: "Personal Portfolio Website",
+		description: "Modern developer portfolio with EmailJS contact integration",
+		subDescription:
+			"A responsive Next.js portfolio showcasing my projects and skills. Features dark/light mode, smooth animations with Framer Motion, and a functional contact form powered by EmailJS for direct messaging without a backend server. Built with Tailwind CSS for a polished, accessible UI. Achieves 100/100 scores on Lighthouse performance, accessibility, best practices, and SEO.",
+		link: "https://jf-portfolio-nextjs.vercel.app/",
+		code: "https://github.com/jfgarcia0911/jf-portfolio-nextjs",
+	},
 	// {
 	// 	image: "/dev-connect.png",
 	// 	title: "Developer Social Platform",

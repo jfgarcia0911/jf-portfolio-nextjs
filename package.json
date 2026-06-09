@@ -30,6 +30,6 @@
     "typescript": "^5"
   },
   "browserslist": {
-  "production": ["last 2 versions", "not dead", "not IE 11"]
+  "production": ["last 2 versions", "not dead"]
 }
 }
